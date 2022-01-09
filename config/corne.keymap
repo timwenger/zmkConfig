@@ -14,34 +14,6 @@
 #define BTL  3
 
 / {
-	combos {
-	   compatible = "zmk,combos";
-	   combo_momentary_BTL {
-		  timeout-ms = <50>;
-		  key-positions = <36 41>;
-		  bindings = <&mo BTL>;
-	   };
-	   combo_L_shift_delete {
-		  timeout-ms = <5>;
-		  key-positions = <16 37>;
-		  bindings = <&kp DELETE>;
-	   };
-	   combo_r_shift_delete {
-		  timeout-ms = <5>;
-		  key-positions = <19 37>;
-		  bindings = <&kp DELETE>;
-	   };
-	   combo_L_shift_enter {
-		  timeout-ms = <5>;
-		  key-positions = <16 40>;
-		  bindings = <&kp ENTER>;
-	   };
-	   combo_r_shift_enter {
-		  timeout-ms = <5>;
-		  key-positions = <19 40>;
-		  bindings = <&kp ENTER>;
-	   };
-	};
 		
     keymap {
         compatible = "zmk,keymap";
