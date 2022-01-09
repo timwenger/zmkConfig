@@ -9,11 +9,40 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define Lone   1
-#define Ltwo   2
-#define BTL  3
+#define L1      1
+#define L2      2
+#define BTL     3
 
 / {
+
+	combos {
+	   compatible = "zmk,combos";
+	   combo_momentary_BTL {
+		  timeout-ms = <50>;
+		  key-positions = <36 41>;
+		  bindings = <&mo BTL>;
+	   };
+	   combo_L_shift_delete {
+		  timeout-ms = <5>;
+		  key-positions = <16 37>;
+		  bindings = <&kp DELETE>;
+	   };
+	   combo_r_shift_delete {
+		  timeout-ms = <5>;
+		  key-positions = <19 37>;
+		  bindings = <&kp DELETE>;
+	   };
+	   combo_L_shift_enter {
+		  timeout-ms = <5>;
+		  key-positions = <16 40>;
+		  bindings = <&kp ENTER>;
+	   };
+	   combo_r_shift_enter {
+		  timeout-ms = <5>;
+		  key-positions = <19 40>;
+		  bindings = <&kp ENTER>;
+	   };
+	};
 		
     keymap {
         compatible = "zmk,keymap";
@@ -23,7 +52,7 @@
                 &none       &kp Q         &kp W         &kp E         &kp R         &kp T                   &kp Y         &kp U          &kp I         &kp O           &kp P           &none
                 &none       &mt LWIN A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp G                   &kp H         &mt LSHFT J    &mt LCTRL K   &mt LALT L      &mt LWIN SEMI   &none
                 &none       &kp Z         &kp X         &kp C         &kp V         &kp B                   &kp N         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &mo Ltwo      &kp BSPC      &mo Lone                &mo Lone      &kp SPACE      &lt Ltwo TAB
+                                                        &mo L2        &kp BSPC      &mo L1                  &mo L1        &kp SPACE      &lt L2   TAB
             >;
         };
     	
@@ -33,7 +62,7 @@
                 &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
                 &none       &mt LWIN HOME &mt LALT LEFT &mt LCTRL DOWN &mt LSHFT RIGHT &kp END               &kp MINUS     &mt LSHFT N4   &mt LCTRL N5  &mt LALT N6     &mt LWIN SLASH  &none
                 &none       &kp C_VOL_DN  &kp C_PP      &kp C_VOL_UP   &kp C_BRI_DEC   &kp C_BRI_INC         &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &mo Ltwo       &kp BSPC        &none                 &none         &kp SPACE      &lt Ltwo TAB
+                                                        &mo L2         &kp BSPC        &none                 &none         &kp SPACE      &lt L2   TAB
             >;
         };
     
@@ -43,7 +72,7 @@
                 &none       &kp GRAVE     &kp BACKSLASH &kp LBKT       &kp RBKT        &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
                 &none       &kp LWIN      &mt LALT APOS &mt LCTRL LPAR &mt LSHFT RPAR  &kp EQUAL             &kp F11       &mt LSHFT F4   &mt LCTRL F5  &mt LALT F6     &kp LWIN        &none
                 &none       &none         &none         &kp LBRC       &kp RBRC        &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &none          &kp BSPC        &mo Lone              &mo Lone      &kp SPACE      &kp TAB
+                                                        &none          &kp BSPC        &mo L1                &mo L1        &kp SPACE      &kp TAB
             >;
         };
 	bluetooth_layer {
@@ -52,7 +81,7 @@
                 &none       &bt BT_CLR    &none         &none          &none           &none                 &reset        &none          &none         &none           &bootloader     &none
                 &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
                 &none       &none         &none         &none          &none           &none                 &none         &none          &none         &none           &none           &none
-                                                        &mo Ltwo       &kp BSPC        &mo Lone              &mo Lone      &kp SPACE      &lt Ltwo TAB
+                                                        &mo L2         &kp BSPC        &mo L1                &mo L1        &kp SPACE      &lt L2   TAB
             >;
         };
     };
