@@ -13,33 +13,18 @@
 #define L2      2
 #define BTL     3
 
-/ {
-
-	combos {
-	   compatible = "zmk,combos";
-	   combo_momentary_BTL {
-		  timeout-ms = <50>;
-		  key-positions = <36 41>;
-		  bindings = <&mo BTL>;
-	   };
-	};
-	
+/ {	
 	behaviors {
-		bspcdel: bspc_del {
-			compatible = "zmk,behavior-mod-morph";
-			label = "BSPC_DEL";
-			#binding-cells = <0>;
-			bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LCTL)>;
-		};
-		
-		spcenter: spc_enter {
-			compatible = "zmk,behavior-mod-morph";
-			label = "SPC_ENTER";
-			#binding-cells = <0>;
-			bindings = <&kp SPACE>, <&kp ENTER>;
-            mods = <(MOD_LCTL)>;
-		};
+	    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 	};
 		
     keymap {
@@ -47,20 +32,20 @@
         default_layer {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp E         &kp R         &kp T                   &kp Y         &kp U          &kp I         &kp O           &kp P           &none
-                &none       &mt LWIN A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp G                   &kp H         &mt LSHFT J    &mt LCTRL K   &mt LALT L      &mt LWIN SEMI   &none
-                &none       &kp Z         &kp X         &kp C         &kp V         &kp B                   &kp N         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &mo L2        &bspcdel      &mo L1                  &mo L1        &spcenter      &lt L2   TAB
-            >;
+                &none       &kp Q         &kp W         &kp E          &kp R           &kp T                 &kp Y         &kp U          &kp I         &kp O           &kp P           &none
+                &none       &hm LWIN A    &hm LALT S    &hm LCTRL D    &hm LSHFT F     &kp G                 &kp H         &hm LSHFT J    &hm LCTRL K   &hm LALT L      &hm LWIN SEMI   &none
+                &none       &kp Z         &kp X         &kp C          &kp V           &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
+                                                        &mo L2         &kp BSPC        &mo L1                &mo L1        &kp SPACE      &mo L2
+            >; 
         };
     	
         layer_1 {
             
     		bindings = <
                 &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
-                &none       &mt LWIN HOME &mt LALT LEFT &mt LCTRL DOWN &mt LSHFT RIGHT &kp END               &kp MINUS     &mt LSHFT N4   &mt LCTRL N5  &mt LALT N6     &mt LWIN SLASH  &none
-                &none       &kp C_VOL_DN  &kp C_PP      &kp C_VOL_UP   &kp C_BRI_DEC   &kp C_BRI_INC         &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &mo L2         &bspcdel        &none                 &none         &spcenter      &lt L2   TAB
+                &none       &hm LWIN HOME &hm LALT LEFT &hm LCTRL DOWN &hm LSHFT RIGHT &kp END               &kp MINUS     &hm LSHFT N4   &hm LCTRL N5  &hm LALT N6     &hm LWIN SLASH  &none
+                &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP      &kp C_VOL_UP     &none                 &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
+                                                        &none          &none           &mo BTL               &mo BTL       &kp TAB        &none
             >;
         };
     
@@ -68,9 +53,9 @@
 
     		bindings = <
                 &none       &kp GRAVE     &kp BACKSLASH &kp LBKT       &kp RBKT        &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
-                &none       &kp LWIN      &mt LALT APOS &mt LCTRL LPAR &mt LSHFT RPAR  &kp EQUAL             &kp F11       &mt LSHFT F4   &mt LCTRL F5  &mt LALT F6     &kp LWIN        &none
+                &none       &kp LWIN      &hm LALT APOS &hm LCTRL LPAR &hm LSHFT RPAR  &kp EQUAL             &kp F11       &hm LSHFT F4   &hm LCTRL F5  &hm LALT F6     &kp LWIN        &none
                 &none       &none         &none         &kp LBRC       &kp RBRC        &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &none          &bspcdel        &mo L1                &mo L1        &spcenter      &kp TAB
+                                                        &none          &kp DELTE       &none                 &none         &kp ENTER      &none
             >;
         };
 	bluetooth_layer {
@@ -79,7 +64,7 @@
                 &none       &bt BT_CLR    &none         &none          &none           &none                 &reset        &none          &none         &none           &bootloader     &none
                 &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
                 &none       &none         &none         &none          &none           &none                 &none         &none          &none         &none           &none           &none
-                                                        &mo L2         &bspcdel        &mo L1                &mo L1        &spcenter      &lt L2   TAB
+                                                        &none          &none           &none                 &none         &none          &none
             >;
         };
     };
