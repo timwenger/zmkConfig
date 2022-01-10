@@ -33,9 +33,9 @@
             mods = <(MOD_LSFT)>;
 		};
 		
-		spcenter: bspc_enter {
+		spcenter: spc_enter {
 			compatible = "zmk,behavior-mod-morph";
-			label = "BSPC_DEL";
+			label = "SPC_ENTER";
 			#binding-cells = <0>;
 			bindings = <&kp SPACE>, <&kp ENTER>;
             mods = <(MOD_LSFT)>;
