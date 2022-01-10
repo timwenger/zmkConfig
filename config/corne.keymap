@@ -14,8 +14,13 @@
 #define L2      2
 #define BTL     3
 
+&lt {
+    tapping-term-ms = <250>;
+    quick_tap_ms = <180>;
+
+};
+
 / {	
-		
 	behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -36,7 +41,7 @@
                 &none       &kp Q         &kp W         &kp E          &kp R           &kp T                 &kp Y         &kp U          &kp I         &kp O           &kp P           &none
                 &none       &hm LWIN A    &hm LALT S    &hm LCTRL D    &hm LSHFT F     &kp G                 &kp H         &hm LSHFT J    &hm LCTRL K   &hm LALT L      &hm LWIN SEMI   &none
                 &none       &kp Z         &kp X         &kp C          &kp V           &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &mo L1         &kp BSPC        &mo L2 DELETE         &mo L2        &kp SPACE      &hm L1 ENTER
+                                                        &lt L1 DELETE  &kp BSPC        &mo L2                &mo L2        &kp SPACE      &lt L1 ENTER
             >; 
         };
     	
