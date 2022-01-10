@@ -51,7 +51,7 @@
                 &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
                 &none       &hm LWIN HOME &hm LALT LEFT &hm LCTRL DOWN &hm LSHFT RIGHT &kp END               &kp MINUS     &hm LSHFT N4   &hm LCTRL N5  &hm LALT N6     &hm LWIN SLASH  &none
                 &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &none                 &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &none          &none           &mo BTL               &mo BTL       &kp TAB        &none
+                                                        &none          &none           &none                 &none         &kp TAB        &none
             >;
         };
     
@@ -61,7 +61,7 @@
                 &none       &kp GRAVE     &kp BACKSLASH &kp LBKT       &kp RBKT        &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
                 &none       &kp LWIN      &hm LALT APOS &hm LCTRL LPAR &hm LSHFT RPAR  &kp EQUAL             &kp F11       &hm LSHFT F4   &hm LCTRL F5  &hm LALT F6     &kp LWIN        &none
                 &none       &none         &none         &kp LBRC       &kp RBRC        &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &none          &none           &none                 &none         &none          &none
+                                                        &none          &none           &mo BTL               &mo BTL       &none          &none
             >;
         };
 	bluetooth_layer {
