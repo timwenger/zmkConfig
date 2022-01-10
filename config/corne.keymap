@@ -30,7 +30,7 @@
 			label = "BSPC_DEL";
 			#binding-cells = <0>;
 			bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LCTL)>;
 		};
 		
 		spcenter: spc_enter {
@@ -38,7 +38,7 @@
 			label = "SPC_ENTER";
 			#binding-cells = <0>;
 			bindings = <&kp SPACE>, <&kp ENTER>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LCTL)>;
 		};
 	};
 		
