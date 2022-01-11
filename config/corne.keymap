@@ -68,8 +68,8 @@
 
     		bindings = <
                 &none       &bt BT_CLR    &out OUT_USB  &out OUT_BLE   &none           &none                 &reset        &none          &none         &none           &bootloader     &none
-                &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
-                &none       &none         &none         &none          &none           &none                 &none         &none          &none         &none           &none           &none
+                &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none       &kp C_AC_FORWARD &kp K_FORWARD &none           &none
+                &none       &none         &none         &none          &none           &none                 &none         &kp C_AC_BACK  &kp K_BACK    &none           &none           &none
                                                         &none          &none           &none                 &none         &none          &none
             >;
         };
