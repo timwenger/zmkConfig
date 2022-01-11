@@ -37,13 +37,22 @@
         };
 	};
 	
+    combos {
+	   compatible = "zmk,combos";
+	   combo_exclamation_mark {
+		  timeout-ms = <50>;
+		  key-positions = <33 34>;
+		  bindings = <&kp EXCLAMATION>;
+	   };
+	};
+	
     keymap {
         compatible = "zmk,keymap";
         base_layer {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI           &none
-                &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm LCTRL N    &hm LALT E    &hm LWIN I      &kp O        &none
+                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI        &none
+                &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm LCTRL N    &hm LALT E    &hm LWIN I      &kp O           &none
                 &none       &kp Z         &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
                                                         &lt L1 TAB     &lt L2 BSPC     &kp LSHFT             &kp LSHFT     &lt L2 SPACE   &lt L1 ENTER
             >; 
