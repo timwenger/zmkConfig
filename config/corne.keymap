@@ -54,27 +54,27 @@
                 &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI        &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm LCTRL N    &hm LALT E    &hm LWIN I      &kp O           &none
                 &none       &kp Z         &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &lt L1 TAB     &lt L2 BSPC     &kp LSHFT             &kp LSHFT     &lt L2 SPACE   &lt L1 ENTER
+                                                        &lt L1 TAB     &lt L2 BSPC     &kp LSHFT             &kp RSHFT     &lt L2 SPACE   &lt L1 ENTER
             >; 
         };
     	
         layer_1 {
             
     		bindings = <
-                &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
-                &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp MINUS     &hm LCTRL N4   &hm LALT N5   &hm LWIN N6     &kp SLASH       &none
-                &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &none                 &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &mo BTL        &none           &kp LSHFT             &kp LSHFT     &none          &mo BTL
+                &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
+                &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp F11       &hm LCTRL F4   &hm LALT F5   &hm LWIN F6     &none           &none
+                &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
+                                                        &mo BTL        &none           &kp LSHFT             &kp RSHFT     &none          &mo BTL
             >;
         };
     
         layer_2 {
 
     		bindings = <
-                &none       &kp GRAVE     &kp BACKSLASH &kp LBKT       &kp RBKT        &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
-                &none       &none         &hm LWIN APOS &hm LALT LPAR  &hm LCTRL RPAR  &kp EQUAL             &kp F11       &hm LCTRL F4   &hm LALT F5   &hm LWIN F6     &none           &none
-                &none       &none         &none         &kp LBRC       &kp RBRC        &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &none          &kp DELETE      &kp LSHFT             &kp LSHFT     &none          &none
+                &none       &kp GRAVE     &kp BACKSLASH &kp LBKT       &kp RBKT        &kp PRINTSCREEN       &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
+                &none       &none         &hm LWIN APOS &hm LALT LPAR  &hm LCTRL RPAR  &kp EQUAL             &kp MINUS     &hm LCTRL N4   &hm LALT N5   &hm LWIN N6     &kp SLASH       &none
+                &none       &none         &none         &kp LBRC       &kp RBRC        &none                 &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
+                                                        &none          &kp DELETE      &kp LSHFT             &kp RSHFT     &none          &none
             >;
         };
 	bluetooth_layer {
