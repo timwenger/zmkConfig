@@ -43,7 +43,7 @@
 	   // left hand top row
 	   
 	   combo_exclamation_mark {
-		  timeout-ms = <100>;            // longer for pinky fingers
+		  timeout-ms = <200>;            // longer for pinky fingers
 		  key-positions = <1 2>;
 		  bindings = <&kp EXCLAMATION>;
 	   };
@@ -81,7 +81,7 @@
 		  bindings = <&kp PIPE2>;
 	   };
 	   combo_caret_symbol {
-		  timeout-ms = <100>;             // longer for pinky fingers
+		  timeout-ms = <150>;             // longer for pinky fingers
 		  key-positions = <9 10>;
 		  bindings = <&kp CARET>;
 	   };
