@@ -121,8 +121,8 @@
 
     		bindings = <
                 &none       &kp GRAVE     &kp TILDE     &kp LBKT       &kp RBKT        &kp EQUAL             &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
-                &none       &kp BSLH      &hm LWIN FSLH &hm LALT LPAR  &hm LCTRL RPAR  &kp DQT               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
-                &none       &none         &none         &kp LBRC       &kp RBRC        &kp SQT               &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
+                &none       &kp BSLH      &hm LWIN FSLH &hm LALT LPAR  &hm LCTRL RPAR  &kp SQT               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
+                &none       &none         &none         &kp LBRC       &kp RBRC        &kp DQT               &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
                                                         &none          &kp DELETE      &kp LSHFT             &kp RSHFT     &none          &none
             >;
         };
