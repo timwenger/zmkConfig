@@ -95,13 +95,13 @@
 	   
 	   combo_backspace {
 		  timeout-ms = <50>;
-		  key-positions = <26 27>;
+		  key-positions = <14 15>;
 		  bindings = <&kp BSPC>;
 	   };
 	   
 	   combo_delete {
 		  timeout-ms = <50>;
-		  key-positions = <27 28>;
+		  key-positions = <26 27>;
 		  bindings = <&kp DELETE>;
 	   };
 	   
@@ -115,8 +115,8 @@
 	   // more combos
 	   
 	   combo_escape {
-		  timeout-ms = <50>;
-		  key-positions = <14 15>;
+		  timeout-ms = <100>;             // longer for pinky fingers
+		  key-positions = <13 14>;
 		  bindings = <&kp ESC>;
 	   };
 	   
@@ -128,7 +128,7 @@
 	   
 	   combo_dash_underscore {
 		  timeout-ms = <50>;
-		  key-positions = <20 21>;
+		  key-positions = <27 28>;
 		  bindings = <&kp MINUS>;
 	   };
 	   
