@@ -115,6 +115,12 @@
 		  key-positions = <31 32>;
 		  bindings = <&kp ENTER>;
 	   };
+	   
+	   combo_semi_colon {
+		  timeout-ms = <50>;
+		  key-positions = <32 33>;
+		  bindings = <&kp SEMICOLON>;
+	   };
 	};
 	
     keymap {
