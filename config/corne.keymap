@@ -116,6 +116,21 @@
 		  key-positions = <32 33>;
 		  bindings = <&kp SEMICOLON>;
 	   };
+	   
+	   
+	   // more combos
+	   
+	   combo_escape {
+		  timeout-ms = <50>;
+		  key-positions = <14 15>;
+		  bindings = <&kp ESC>;
+	   };
+	   
+	   combo_dash_underscore {
+		  timeout-ms = <50>;
+		  key-positions = <20 21>;
+		  bindings = <&kp MINUS>;
+	   };
 	};
 	
     keymap {
