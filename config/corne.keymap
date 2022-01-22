@@ -18,11 +18,6 @@
 #define L2      2
 #define BTL     3
 
-&lt {
-    tapping-term-ms = <250>;
-    quick_tap_ms = <180>;
-
-};
 
 / {	
 	behaviors {
@@ -125,7 +120,7 @@
 	
     keymap {
         compatible = "zmk,keymap";
-        base_layer {
+        layer_0 {
          
             bindings = <
                 &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp COLON       &none
