@@ -91,7 +91,7 @@
 	   
 	   
 	   
-	   // backspace, delete, enter, semicolon
+	   // backspace, delete, enter
 	   
 	   combo_backspace {
 		  timeout-ms = <50>;
@@ -111,12 +111,6 @@
 		  bindings = <&kp ENTER>;
 	   };
 	   
-	   combo_semi_colon {
-		  timeout-ms = <50>;
-		  key-positions = <32 33>;
-		  bindings = <&kp SEMICOLON>;
-	   };
-	   
 	   
 	   // more combos
 	   
@@ -126,11 +120,23 @@
 		  bindings = <&kp ESC>;
 	   };
 	   
+	   combo_screenshot {
+		  timeout-ms = <50>;
+		  key-positions = <16 17>;
+		  bindings = <&kp PRINTSCREEN>;
+	   };
+	   
 	   combo_dash_underscore {
 		  timeout-ms = <50>;
 		  key-positions = <20 21>;
 		  bindings = <&kp MINUS>;
 	   };
+	   
+	   combo_semi_colon {
+		  timeout-ms = <50>;
+		  key-positions = <32 33>;
+		  bindings = <&kp SEMICOLON>;
+	   };	   
 	};
 	
     keymap {
