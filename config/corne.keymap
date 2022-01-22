@@ -35,14 +35,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-		tls: tap_layer_shift {
+		tls: tap_layer_shift { // tap to change layer, hold for keypress (designed for shift)
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_LAYER_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <180>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&to>;
+            bindings = <&kp>, <&to>; // first param is hold, second param is tap
         };
 	};
 	
@@ -112,7 +111,7 @@
                 &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI        &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &kp O           &none
                 &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &kp TAB        &tls L1 LSHFT   &none                 &none         &kp RSHFT      &kp SPACE
+                                                        &kp TAB        &tls LSHFT L1   &none                 &none         &kp RSHFT      &kp SPACE
             >; 
         };
     	
@@ -122,7 +121,7 @@
                 &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
                 &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp F11       &hm RCTRL F4   &hm RALT F5   &hm LWIN F6     &none           &none
                 &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &kp K_CONTEXT_MENU    &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &kp ENTER      &tls L2 LSHFT   &none                 &none         &tls L0 RSHFT  &kp BSPC
+                                                        &kp ENTER      &tls LSHFT L2   &none                 &none         &tls RSHFT L0  &kp BSPC
             >;
         };
     
@@ -132,7 +131,7 @@
                 &none       &kp GRAVE     &kp TILDE     &kp LBKT       &kp RBKT        &kp EQUAL             &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
                 &none       &kp BSLH      &hm LWIN FSLH &hm LALT LPAR  &hm LCTRL RPAR  &kp SQT               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
                 &none       &none         &none         &kp LBRC       &kp RBRC        &kp DQT               &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &none          &tls BTL LSHFT  &none                 &none         &tls L0 RSHFT  &kp DELETE
+                                                        &none          &tls LSHFT BTL  &none                 &none         &tls RSHFT L0  &kp DELETE
             >;
         };
 	bluetooth_layer {
@@ -141,7 +140,7 @@
                 &none       &bt BT_CLR    &out OUT_USB  &out OUT_BLE   &none           &none                 &reset        &none          &none         &none           &bootloader     &none
                 &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
                 &none       &none         &none         &none          &none           &none                 &none         &none          &none         &none           &none           &none
-                                                        &none          &tls L0 LSHFT   &none                 &none         &none          &none
+                                                        &none          &tls LSHFT L0   &none                 &none         &none          &none
             >;
         };
     };
