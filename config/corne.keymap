@@ -96,7 +96,7 @@
 	   
 	   
 	   
-	   // backspace, delete, and enter
+	   // backspace, delete, enter, semicolon
 	   
 	   combo_backspace {
 		  timeout-ms = <50>;
@@ -107,13 +107,18 @@
 	   combo_delete {
 		  timeout-ms = <50>;
 		  key-positions = <27 28>;
-		  bindings = <&kp BSPC>;
+		  bindings = <&kp DELETE>;
 	   };
 	   
 	   combo_enter {
 		  timeout-ms = <50>;
 		  key-positions = <31 32>;
 		  bindings = <&kp ENTER>;
+	   };
+	   combo_semicolon {
+		  timeout-ms = <50>;
+		  key-positions = <32, 33>;
+		  bindings = <&kp SEMI>;
 	   };
 	};
 	
@@ -122,7 +127,7 @@
         base_layer {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI        &none
+                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp COLON       &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &kp O           &none
                 &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp QMARK       &none
                                                         &kp TAB        &kp LSHFT       &none                 &none         &tls RSHFT L1  &kp SPACE
