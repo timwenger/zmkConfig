@@ -45,11 +45,6 @@
 		
 	   // left hand top row.
 	   
-	   combo_exclamation_mark {
-		  timeout-ms = <200>;            // longer for pinky fingers
-		  key-positions = <1 2>;
-		  bindings = <&kp EXCLAMATION>;
-	   };
 	   combo_at_symbol {
 		  timeout-ms = <50>;
 		  key-positions = <2 3>;
@@ -114,28 +109,34 @@
 	   
 	   // more combos
 	   
-	   combo_escape {
-		  timeout-ms = <100>;             // longer for pinky fingers
-		  key-positions = <13 14>;
-		  bindings = <&kp ESC>;
-	   };
-	   
 	   combo_screenshot {
 		  timeout-ms = <50>;
 		  key-positions = <16 17>;
 		  bindings = <&kp PRINTSCREEN>;
 	   };
 	   
+       combo_single_double_quotes {
+		  timeout-ms = <50>;
+		  key-positions = <18 19>;
+		  bindings = <&kp APOSTROPHE>;
+	   };
+	   
 	   combo_dash_underscore {
 		  timeout-ms = <50>;
-		  key-positions = <31 32>;
+		  key-positions = <30 31>;
 		  bindings = <&kp MINUS>;
 	   };
 	   
 	   combo_semi_colon {
 		  timeout-ms = <50>;
-		  key-positions = <32 33>;
+		  key-positions = <31 32>;
 		  bindings = <&kp SEMICOLON>;
+	   };
+
+       combo_exclamation_mark {
+		  timeout-ms = <50>;
+		  key-positions = <32 33>;
+		  bindings = <&kp EXCLAMATION>;
 	   };	   
 	};
 	
@@ -144,7 +145,7 @@
         layer_0 {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp COLON       &none
+                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp ESC         &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &kp O           &none
                 &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp QMARK       &none
                                                         &kp TAB        &kp LSHFT       &none                 &none         &tls RSHFT L1  &kp SPACE
@@ -154,7 +155,7 @@
         layer_1 {
             
     		bindings = <
-			    &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &kp PRINTSCREEN       &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
+			    &none       &kp none      &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
                 &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
                 &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &kp K_CONTEXT_MENU    &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
                                                         &kp TAB        &tls LSHFT L0   &none                 &none         &tls RSHFT L2  &kp SPACE
