@@ -117,25 +117,25 @@
 	   
        combo_single_double_quotes {
 		  timeout-ms = <50>;
-		  key-positions = <18 19>;
+		  key-positions = <19 21>;
 		  bindings = <&kp APOSTROPHE>;
 	   };
 	   
 	   combo_dash_underscore {
 		  timeout-ms = <50>;
-		  key-positions = <30 31>;
+		  key-positions = <31 32>;
 		  bindings = <&kp MINUS>;
 	   };
 	   
 	   combo_semi_colon {
 		  timeout-ms = <50>;
-		  key-positions = <31 32>;
+		  key-positions = <32 33>;
 		  bindings = <&kp SEMICOLON>;
 	   };
 
        combo_exclamation_mark {
-		  timeout-ms = <50>;
-		  key-positions = <32 33>;
+		  timeout-ms = <150>; // longer timeout for pinky fingers
+		  key-positions = <33 34>;
 		  bindings = <&kp EXCLAMATION>;
 	   };	   
 	};
@@ -155,7 +155,7 @@
         layer_1 {
             
     		bindings = <
-			    &none       &none      &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
+			    &none       &none         &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
                 &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
                 &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &kp K_CONTEXT_MENU    &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
                                                         &kp TAB        &tls LSHFT L0   &none                 &none         &tls RSHFT L2  &kp SPACE
