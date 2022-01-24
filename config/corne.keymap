@@ -38,6 +38,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&to>;     // first param is hold, second param is tap
         };
+		qem: question_exclamation_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_EXCLAMATION_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCLAMATION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 	};
 	
     combos {
@@ -147,7 +154,7 @@
             bindings = <
                 &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp ESC         &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &kp O           &none
-                &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp QMARK       &none
+                &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &qem            &none
                                                         &kp TAB        &kp LSHFT       &none                 &none         &tls RSHFT L1  &kp SPACE
             >; 
         };
