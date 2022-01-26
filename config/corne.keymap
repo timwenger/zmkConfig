@@ -112,6 +112,81 @@
 		  key-positions = <20 21>;
 		  bindings = <&kp ENTER>;
 	   };
+		   
+	   
+	   
+	   // combos for brackets using right index finger
+	   
+	   combo_l_square_bracket {
+		  timeout-ms = <50>;
+		  key-positions = <3 19>;
+		  bindings = <&kp LBKT>;
+	   };
+	   
+	   combo_r_square_bracket {
+		  timeout-ms = <50>;
+		  key-positions = <4 19>;
+		  bindings = <&kp RBKT>;
+	   };
+	   
+	   combo_l_paren {
+		  timeout-ms = <50>;
+		  key-positions = <15 19>;
+		  bindings = <&kp LPAR>;
+	   };
+	   
+	   combo_r_paren {
+		  timeout-ms = <50>;
+		  key-positions = <16 19>;
+		  bindings = <&kp RPAR>;
+	   };
+	   
+	   combo_l_brace {
+		  timeout-ms = <50>;
+		  key-positions = <27 19>;
+		  bindings = <&kp LBRC>;
+	   };
+	   
+	   combo_r_brace {
+		  timeout-ms = <50>;
+		  key-positions = <28 19>;
+		  bindings = <&kp RBRC>;
+	   };
+	   
+	   
+	   
+	   // combos for math using left index finger
+	   
+	   combo_plus {
+		  timeout-ms = <50>;
+		  key-positions = <16 6>;
+		  bindings = <&kp PLUS>;
+	   };
+	   
+	   combo_minus_underscore {
+		  timeout-ms = <50>;
+		  key-positions = <16 18>;
+		  bindings = <&kp MINUS>;
+	   };
+	   
+	   combo_equals {
+		  timeout-ms = <50>;
+		  key-positions = <16 30>;
+		  bindings = <&kp EQUAL>;
+	   };
+	   
+	   combo_multiply {
+		  timeout-ms = <50>;
+		  key-positions = <16 10>;
+		  bindings = <&kp ASTERISK>;
+	   };
+	   
+	   combo_divide {
+		  timeout-ms = <50>;
+		  key-positions = <16 22>;
+		  bindings = <&kp SLASH>;
+	   };
+	   
 	   
 	   
 	   // more combos
@@ -128,11 +203,6 @@
 		  bindings = <&kp APOSTROPHE>;
 	   };
 	   
-	   combo_dash_underscore {
-		  timeout-ms = <50>;
-		  key-positions = <31 32>;
-		  bindings = <&kp MINUS>;
-	   };
 	   
 	   combo_semi_colon {
 		  timeout-ms = <50>;
@@ -144,7 +214,7 @@
 		  timeout-ms = <150>; // longer timeout for pinky fingers
 		  key-positions = <33 34>;
 		  bindings = <&kp EXCLAMATION>;
-	   };	   
+	   };
 	};
 	
     keymap {
@@ -162,7 +232,7 @@
         layer_1 {
             
     		bindings = <
-			    &none       &none         &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
+			    &none       &none         &kp PG_DN     &kp UP         &kp PG_UP       &none                 &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ESC         &none
                 &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
                 &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &kp K_CONTEXT_MENU    &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
                                                         &kp TAB        &tls LSHFT L0   &none                 &none         &tls RSHFT L2  &kp SPACE
@@ -172,7 +242,7 @@
         layer_2 {
 
     		bindings = <
-                &none       &kp GRAVE     &kp TILDE     &kp LBKT       &kp RBKT        &kp EQUAL             &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
+                &none       &kp GRAVE     &kp TILDE     &kp LBKT       &kp RBKT        &kp EQUAL             &kp F12       &kp F7         &kp F8        &kp F9          &kp ESC         &none
                 &none       &kp BSLH      &hm LWIN FSLH &hm LALT LPAR  &hm LCTRL RPAR  &kp SQT               &kp F11       &hm RCTRL F4   &hm RALT F5   &hm LWIN F6     &none           &none
                 &none       &none         &none         &kp LBRC       &kp RBRC        &kp DQT               &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
                                                         &kp TAB        &tls LSHFT L0   &none                 &none         &tls RSHFT BTL &kp SPACE
