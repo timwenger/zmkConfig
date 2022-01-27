@@ -137,7 +137,7 @@
 	   
 	   combo_r_paren {
 		  timeout-ms = <50>;
-		  key-positions = <16 19>;
+		  key-positions = <15 16 19>;
 		  bindings = <&kp RPAR>;
 	   };
 	   
@@ -155,7 +155,7 @@
 	   
 	   
 	   
-	   // combos for math using left index finger
+	   // combos for math and numbers using left index finger
 	   
 	   combo_plus {
 		  timeout-ms = <50>;
@@ -171,7 +171,7 @@
 	   
 	   combo_equals {
 		  timeout-ms = <50>;
-		  key-positions = <16 30>;
+		  key-positions = <16 30 31>;
 		  bindings = <&kp EQUAL>;
 	   };
 	   
@@ -185,6 +185,66 @@
 		  timeout-ms = <50>;
 		  key-positions = <16 22>;
 		  bindings = <&kp SLASH>;
+	   };
+	   
+	   combo_num_zero {
+		  timeout-ms = <50>;
+		  key-positions = <16 30>;
+		  bindings = <&kp N0>;
+	   };
+	   
+	   combo_num_one {
+		  timeout-ms = <50>;
+		  key-positions = <16 31>;
+		  bindings = <&kp N1>;
+	   };
+	   
+	   combo_num_two {
+		  timeout-ms = <50>;
+		  key-positions = <16 32>;
+		  bindings = <&kp N2>;
+	   };
+	   
+	   combo_num_three {
+		  timeout-ms = <50>;
+		  key-positions = <16 33>;
+		  bindings = <&kp N3>;
+	   };
+	   
+	   combo_num_four {
+		  timeout-ms = <50>;
+		  key-positions = <16 19>;
+		  bindings = <&kp N4>;
+	   };
+	   
+	   combo_num_five {
+		  timeout-ms = <50>;
+		  key-positions = <16 20>;
+		  bindings = <&kp N5>;
+	   };
+	   
+	   combo_num_six {
+		  timeout-ms = <50>;
+		  key-positions = <16 21>;
+		  bindings = <&kp N6>;
+	   };
+	   
+	   combo_num_seven {
+		  timeout-ms = <50>;
+		  key-positions = <16 7>;
+		  bindings = <&kp N7>;
+	   };
+	   
+	   combo_num_eight {
+		  timeout-ms = <50>;
+		  key-positions = <16 8>;
+		  bindings = <&kp N8>;
+	   };
+	   
+	   combo_num_nine {
+		  timeout-ms = <50>;
+		  key-positions = <16 9>;
+		  bindings = <&kp N9>;
 	   };
 	   
 	   
