@@ -31,7 +31,7 @@
 // defines for more compact combo syntax
 
 #define COMBO(NAME, TIMEOUT, KEYPOS, BINDINGS) \
-  COMBO(##NAME { \
+  combo_##NAME { \
     timeout-ms = <TIMEOUT>; \
     key-positions = <KEYPOS>; \
 	bindings = <BINDINGS>; \
