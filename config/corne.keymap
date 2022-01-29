@@ -72,26 +72,14 @@
 		
 	   // left hand top row.
 	   
-	   COMBO(at_symbol, 50, 2 3, &kp AT_SIGN)
-	   
-	   combo_dollar_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <3 4>;
-		  bindings = <&kp DOLLAR>;
-	   };
-	   combo_hash_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <4 5>;
-		  bindings = <&kp HASH>;
-	   };
+	   COMBO(at_symbol,        50,  2  3, &kp AT_SIGN)
+	   COMBO(dollar_symbol,    50,  3  4, &kp DOLLAR)
+	   COMBO(hash_symbol,      50,  4  5, &kp HASH)
 	   
 	   // right hand top row
 	   
-	   combo_percent_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <6 7>;
-		  bindings = <&kp PERCENT>;
-	   };
+	   COMBO(percent_symbol,   50,  6  7, &kp PERCENT)
+	   
 	   combo_and_symbol {
 		  timeout-ms = <50>;
 		  key-positions = <7 8>;
