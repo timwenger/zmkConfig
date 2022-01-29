@@ -72,20 +72,22 @@
 	   compatible = "zmk,combos";
 		
 	   
-	   // left hand top row.
+	   // left hand general
 	   
-	   COMBO(at_symbol,        50,  2  3, &kp AT_SIGN)
-	   COMBO(dollar_symbol,    50,  3  4, &kp DOLLAR)
-	   COMBO(hash_symbol,      50,  4  5, &kp HASH)
+	   COMBO(pg_dn,            50,  2  3, &kp PG_DN)
+	   COMBO(pg_up,            50,  3  4, &kp PG_UP)
+	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
+	   COMBO(cntxt_menu,       50, 28 29, &kp K_CONTEXT_MENU)
+	   COMBO(bar,              50, 14 26, &kp PIPE)                // vertical
+	   COMBO(back_slash,       50, 15 27, &kp PIPE)                // vertical
+	   COMBO(fwd_slash,        50, 16 28, &kp PIPE)                // vertical
 	   
 	   
-	   // right hand top row
+	   // right hand general
 	   
-	   COMBO(percent_symbol,   50,  6  7, &kp PERCENT)
-	   COMBO(and_symbol,       50,  7  8, &kp AMPERSAND)
-	   COMBO(or_symbol,        50,  8  9, &kp PIPE2)
-	   COMBO(caret_symbol,    150,  9 10, &kp CARET)	   
-	   
+	   COMBO(quotes,           50,  8  9, &kp APOSTROPHE)
+	   COMBO(semi_colon,       50, 32 33, &kp SEMICOLON)	  
+	  
 	   
 	   // backspace, delete, enter
 	   
@@ -94,41 +96,38 @@
 	   COMBO(enter,            50, 20 21, &kp ENTER)		   
 	   
 	   
-	   // combos for brackets using right index finger
+	   // brackets
 	   
-	   COMBO(l_square_bracket, 50,  3 19, &kp LBKT)
-	   COMBO(r_square_bracket, 50,  4 19, &kp RBKT)
-	   COMBO(l_paren,          50, 15 19, &kp LPAR)
-	   COMBO(r_paren,          50, 15 16 19, &kp RPAR)
-	   COMBO(l_brace,          50, 27 19, &kp LBRC)
-	   COMBO(r_brace,          50, 28 19, &kp RBRC)
-	   
-	   
-	   // combos for math and numbers using left index finger
-	   
-	   COMBO(plus,             50, 16  6, &kp PLUS)
-	   COMBO(minus_underscore, 50, 16 18, &kp MINUS)
-	   COMBO(equals,           50, 16 30 31, &kp EQUAL)
-	   COMBO(multiply,         50, 16 10, &kp ASTERISK)
-	   COMBO(divide,           50, 16 22, &kp SLASH)
-	   
-	   COMBO(num_zero,         50, 16 30, &kp N0)
-	   COMBO(num_one,          50, 16 31, &kp N1)
-	   COMBO(num_two,          50, 16 32, &kp N2)
-	   COMBO(num_three,        50, 16 33, &kp N3)
-	   COMBO(num_four,         50, 16 19, &kp N4)
-	   COMBO(num_five,         50, 16 20, &kp N5)
-	   COMBO(num_six,          50, 16 21, &kp N6)
-	   COMBO(num_seven,        50, 16 7,  &kp N7)
-	   COMBO(num_eight,        50, 16 8,  &kp N8)
-	   COMBO(num_nine,         50, 16 9,  &kp N9)
+	   COMBO(l_square_bracket, 50,  2  4, &kp LBKT)
+	   COMBO(r_square_bracket, 50,  7  9, &kp RBKT)
+	   COMBO(l_paren,          50, 14 16, &kp LPAR)
+	   COMBO(r_paren,          50, 19 21, &kp RPAR)
+	   COMBO(l_brace,          50, 26 28, &kp LBRC)
+	   COMBO(r_brace,          50, 31 33, &kp RBRC)
 	   
 	   
-	   // more combos
+	   // for math
 	   
-	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
-	   COMBO(quotes,           50, 19 21, &kp APOSTROPHE)
-	   COMBO(semi_colon,       50, 32 33, &kp SEMICOLON)	   
+	   COMBO(equals_plus,      50,  7  8, &kp EQUAL)
+	   COMBO(minus_underscore, 50, 31 32, &kp MINUS)
+	   COMBO(multiply,         50,  6  7, &kp ASTERISK)
+	   COMBO(divide,           50, 30 31, &kp SLASH)
+	   
+	   
+	   // numbers row
+	   	   
+	   COMBO(num_one,          50,  1 13, &kp N1)                // vertical
+	   COMBO(num_two,          50,  2 14, &kp N2)                // vertical
+	   COMBO(num_three,        50,  3 15, &kp N3)                // vertical
+	   COMBO(num_four,         50,  4 16, &kp N4)                // vertical
+	   COMBO(num_five,         50,  5 17, &kp N5)                // vertical
+	   COMBO(num_six,          50,  6 18, &kp N6)                // vertical
+	   COMBO(num_seven,        50,  7 19, &kp N7)                // vertical
+	   COMBO(num_eight,        50,  8 20, &kp N8)                // vertical
+	   COMBO(num_nine,         50,  9 21, &kp N9)                // vertical
+	   COMBO(num_zero,         50, 10 22, &kp N0)                // vertical
+	   
+ 
 	};
 	
     keymap {
