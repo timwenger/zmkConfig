@@ -31,7 +31,7 @@
 // defines for more compact combo syntax
 
 #define COMBO(NAME, TIMEOUT, KEYPOS, BINDINGS) \
-  combo_##NAME { \
+  COMBO(##NAME { \
     timeout-ms = <TIMEOUT>; \
     key-positions = <KEYPOS>; \
 	bindings = <BINDINGS>; \
@@ -70,216 +70,64 @@
     combos {
 	   compatible = "zmk,combos";
 		
+	   
 	   // left hand top row.
 	   
 	   COMBO(at_symbol,        50,  2  3, &kp AT_SIGN)
 	   COMBO(dollar_symbol,    50,  3  4, &kp DOLLAR)
 	   COMBO(hash_symbol,      50,  4  5, &kp HASH)
 	   
+	   
 	   // right hand top row
 	   
 	   COMBO(percent_symbol,   50,  6  7, &kp PERCENT)
-	   
-	   combo_and_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <7 8>;
-		  bindings = <&kp AMPERSAND>;
-	   };
-	   combo_or_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <8 9>;
-		  bindings = <&kp PIPE2>;
-	   };
-	   combo_caret_symbol {
-		  timeout-ms = <150>;             // longer for pinky fingers
-		  key-positions = <9 10>;
-		  bindings = <&kp CARET>;
-	   };
-	   
+	   COMBO(and_symbol,       50,  7  8, &kp AMPERSAND)
+	   COMBO(or_symbol,        50,  8  9, &kp PIPE2)
+	   COMBO(caret_symbol,    150,  9 10, &kp CARET)	   
 	   
 	   
 	   // backspace, delete, enter
 	   
-	   combo_backspace {
-		  timeout-ms = <50>;
-		  key-positions = <14 15>;
-		  bindings = <&kp BSPC>;
-	   };
-	   
-	   combo_delete {
-		  timeout-ms = <50>;
-		  key-positions = <26 27>;
-		  bindings = <&kp DELETE>;
-	   };
-	   
-	   combo_enter {
-		  timeout-ms = <50>;
-		  key-positions = <20 21>;
-		  bindings = <&kp ENTER>;
-	   };
-		   
+	   COMBO(backspace,        50, 14 15, &kp BSPC)
+	   COMBO(delete,           50, 26 27, &kp DELETE)
+	   COMBO(enter,            50, 20 21, &kp ENTER)		   
 	   
 	   
 	   // combos for brackets using right index finger
 	   
-	   combo_l_square_bracket {
-		  timeout-ms = <50>;
-		  key-positions = <3 19>;
-		  bindings = <&kp LBKT>;
-	   };
-	   
-	   combo_r_square_bracket {
-		  timeout-ms = <50>;
-		  key-positions = <4 19>;
-		  bindings = <&kp RBKT>;
-	   };
-	   
-	   combo_l_paren {
-		  timeout-ms = <50>;
-		  key-positions = <15 19>;
-		  bindings = <&kp LPAR>;
-	   };
-	   
-	   combo_r_paren {
-		  timeout-ms = <50>;
-		  key-positions = <15 16 19>;
-		  bindings = <&kp RPAR>;
-	   };
-	   
-	   combo_l_brace {
-		  timeout-ms = <50>;
-		  key-positions = <27 19>;
-		  bindings = <&kp LBRC>;
-	   };
-	   
-	   combo_r_brace {
-		  timeout-ms = <50>;
-		  key-positions = <28 19>;
-		  bindings = <&kp RBRC>;
-	   };
-	   
+	   COMBO(l_square_bracket, 50,  3 19, &kp LBKT)
+	   COMBO(r_square_bracket, 50,  4 19, &kp RBKT)
+	   COMBO(l_paren,          50, 15 19, &kp LPAR)
+	   COMBO(r_paren,          50, 15 16 19, &kp RPAR)
+	   COMBO(l_brace,          50, 27 19, &kp LBRC)
+	   COMBO(r_brace,          50, 28 19, &kp RBRC)
 	   
 	   
 	   // combos for math and numbers using left index finger
 	   
-	   combo_plus {
-		  timeout-ms = <50>;
-		  key-positions = <16 6>;
-		  bindings = <&kp PLUS>;
-	   };
+	   COMBO(plus,             50, 16  6, &kp PLUS)
+	   COMBO(minus_underscore, 50, 16 18, &kp MINUS)
+	   COMBO(equals,           50, 16 30 31, &kp EQUAL)
+	   COMBO(multiply,         50, 16 10, &kp ASTERISK)
+	   COMBO(divide,           50, 16 22, &kp SLASH)
 	   
-	   combo_minus_underscore {
-		  timeout-ms = <50>;
-		  key-positions = <16 18>;
-		  bindings = <&kp MINUS>;
-	   };
-	   
-	   combo_equals {
-		  timeout-ms = <50>;
-		  key-positions = <16 30 31>;
-		  bindings = <&kp EQUAL>;
-	   };
-	   
-	   combo_multiply {
-		  timeout-ms = <50>;
-		  key-positions = <16 10>;
-		  bindings = <&kp ASTERISK>;
-	   };
-	   
-	   combo_divide {
-		  timeout-ms = <50>;
-		  key-positions = <16 22>;
-		  bindings = <&kp SLASH>;
-	   };
-	   
-	   combo_num_zero {
-		  timeout-ms = <50>;
-		  key-positions = <16 30>;
-		  bindings = <&kp N0>;
-	   };
-	   
-	   combo_num_one {
-		  timeout-ms = <50>;
-		  key-positions = <16 31>;
-		  bindings = <&kp N1>;
-	   };
-	   
-	   combo_num_two {
-		  timeout-ms = <50>;
-		  key-positions = <16 32>;
-		  bindings = <&kp N2>;
-	   };
-	   
-	   combo_num_three {
-		  timeout-ms = <50>;
-		  key-positions = <16 33>;
-		  bindings = <&kp N3>;
-	   };
-	   
-	   combo_num_four {
-		  timeout-ms = <50>;
-		  key-positions = <16 19>;
-		  bindings = <&kp N4>;
-	   };
-	   
-	   combo_num_five {
-		  timeout-ms = <50>;
-		  key-positions = <16 20>;
-		  bindings = <&kp N5>;
-	   };
-	   
-	   combo_num_six {
-		  timeout-ms = <50>;
-		  key-positions = <16 21>;
-		  bindings = <&kp N6>;
-	   };
-	   
-	   combo_num_seven {
-		  timeout-ms = <50>;
-		  key-positions = <16 7>;
-		  bindings = <&kp N7>;
-	   };
-	   
-	   combo_num_eight {
-		  timeout-ms = <50>;
-		  key-positions = <16 8>;
-		  bindings = <&kp N8>;
-	   };
-	   
-	   combo_num_nine {
-		  timeout-ms = <50>;
-		  key-positions = <16 9>;
-		  bindings = <&kp N9>;
-	   };
-	   
+	   COMBO(num_zero,         50, 16 30, &kp N0)
+	   COMBO(num_one,          50, 16 31, &kp N1)
+	   COMBO(num_two,          50, 16 32, &kp N2)
+	   COMBO(num_three,        50, 16 33, &kp N3)
+	   COMBO(num_four,         50, 16 19, &kp N4)
+	   COMBO(num_five,         50, 16 20, &kp N5)
+	   COMBO(num_six,          50, 16 21, &kp N6)
+	   COMBO(num_seven,        50, 16 7,  &kp N7)
+	   COMBO(num_eight,        50, 16 8,  &kp N8)
+	   COMBO(num_nine,         50, 16 9,  &kp N9)
 	   
 	   
 	   // more combos
 	   
-	   combo_screenshot {
-		  timeout-ms = <50>;
-		  key-positions = <16 17>;
-		  bindings = <&kp PRINTSCREEN>;
-	   };
-	   
-       combo_single_double_quotes {
-		  timeout-ms = <50>;
-		  key-positions = <19 21>;
-		  bindings = <&kp APOSTROPHE>;
-	   };
-	   
-	   
-	   combo_semi_colon {
-		  timeout-ms = <50>;
-		  key-positions = <32 33>;
-		  bindings = <&kp SEMICOLON>;
-	   };
-
-       combo_exclamation_mark {
-		  timeout-ms = <150>; // longer timeout for pinky fingers
-		  key-positions = <33 34>;
-		  bindings = <&kp EXCLAMATION>;
-	   };
+	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
+	   COMBO(quotes,           50, 19 21, &kp APOSTROPHE)
+	   COMBO(semi_colon,       50, 32 33, &kp SEMICOLON)	   
 	};
 	
     keymap {
