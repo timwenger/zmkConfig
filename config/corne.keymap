@@ -7,16 +7,36 @@
  * 
  *
  */
+ 
+ /*                KEY POSITIONS
+
+   -------------------------    -------------------------
+  | x0   1   2   3   4    5 | |  6   7   8   9  10  x11  |
+  |x12  13  14  15  16   17 | | 18  19  20  21  22  x23  |
+  |x24  25  26  27  28   29 | | 30  31  32  33  34  x35  |
+   -----------  36  37  x38 | |x39  40   41  ------------
+               -------------   -------------            */
+
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define DEFAULT 0
+#define L0      0
 #define L1      1
-#define L2      2
-#define BTL     3
+#define BTL     2
+
+// defines for more compact combo syntax
+
+#define COMBO(NAME, TIMEOUT, KEYPOS, BINDINGS) \
+  combo_##NAME { \
+    timeout-ms = <TIMEOUT>; \
+    key-positions = <KEYPOS>; \
+	bindings = <BINDINGS>; \
+  };
+  
 
 &lt {
     tapping-term-ms = <250>;
@@ -26,6 +46,7 @@
 
 / {	
 	behaviors {
+	
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -35,103 +56,109 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+		
+		qem: question_exclamation_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_EXCLAMATION_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCLAMATION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+		
 	};
+	
 	
     combos {
 	   compatible = "zmk,combos";
 		
-	   // left hand top row
 	   
-	   combo_exclamation_mark {
-		  timeout-ms = <200>;            // longer for pinky fingers
-		  key-positions = <1 2>;
-		  bindings = <&kp EXCLAMATION>;
-		  layers = <0>;
-	   };
-	   combo_at_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <2 3>;
-		  bindings = <&kp AT_SIGN>;
-		  layers = <0>;
-	   };
-	   combo_dollar_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <3 4>;
-		  bindings = <&kp DOLLAR>;
-		  layers = <0>;
-	   };
-	   combo_hash_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <4 5>;
-		  bindings = <&kp HASH>;
-		  layers = <0>;
-	   };
+	   // left hand top row.
+	   
+	   COMBO(at_symbol,        50,  2  3, &kp AT_SIGN)
+	   COMBO(dollar_symbol,    50,  3  4, &kp DOLLAR)
+	   COMBO(hash_symbol,      50,  4  5, &kp HASH)
+	   
 	   
 	   // right hand top row
 	   
-	   combo_percent_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <6 7>;
-		  bindings = <&kp PERCENT>;
-		  layers = <0>;
-	   };
-	   combo_and_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <7 8>;
-		  bindings = <&kp AMPERSAND>;
-		  layers = <0>;
-	   };
-	   combo_or_symbol {
-		  timeout-ms = <50>;
-		  key-positions = <8 9>;
-		  bindings = <&kp PIPE2>;
-		  layers = <0>;
-	   };
-	   combo_caret_symbol {
-		  timeout-ms = <150>;             // longer for pinky fingers
-		  key-positions = <9 10>;
-		  bindings = <&kp CARET>;
-		  layers = <0>;
-	   };
+	   COMBO(percent_symbol,   50,  6  7, &kp PERCENT)
+	   COMBO(and_symbol,       50,  7  8, &kp AMPERSAND)
+	   COMBO(or_symbol,        50,  8  9, &kp PIPE2)
+	   COMBO(caret_symbol,    150,  9 10, &kp CARET)	   
+	   
+	   
+	   // backspace, delete, enter
+	   
+	   COMBO(backspace,        50, 14 15, &kp BSPC)
+	   COMBO(delete,           50, 26 27, &kp DELETE)
+	   COMBO(enter,            50, 20 21, &kp ENTER)		   
+	   
+	   
+	   // combos for brackets using right index finger
+	   
+	   COMBO(l_square_bracket, 50,  3 19, &kp LBKT)
+	   COMBO(r_square_bracket, 50,  4 19, &kp RBKT)
+	   COMBO(l_paren,          50, 15 19, &kp LPAR)
+	   COMBO(r_paren,          50, 15 16 19, &kp RPAR)
+	   COMBO(l_brace,          50, 27 19, &kp LBRC)
+	   COMBO(r_brace,          50, 28 19, &kp RBRC)
+	   
+	   
+	   // combos for math and numbers using left index finger
+	   
+	   COMBO(plus,             50, 16  6, &kp PLUS)
+	   COMBO(minus_underscore, 50, 16 18, &kp MINUS)
+	   COMBO(equals,           50, 16 30 31, &kp EQUAL)
+	   COMBO(multiply,         50, 16 10, &kp ASTERISK)
+	   COMBO(divide,           50, 16 22, &kp SLASH)
+	   
+	   COMBO(num_zero,         50, 16 30, &kp N0)
+	   COMBO(num_one,          50, 16 31, &kp N1)
+	   COMBO(num_two,          50, 16 32, &kp N2)
+	   COMBO(num_three,        50, 16 33, &kp N3)
+	   COMBO(num_four,         50, 16 19, &kp N4)
+	   COMBO(num_five,         50, 16 20, &kp N5)
+	   COMBO(num_six,          50, 16 21, &kp N6)
+	   COMBO(num_seven,        50, 16 7,  &kp N7)
+	   COMBO(num_eight,        50, 16 8,  &kp N8)
+	   COMBO(num_nine,         50, 16 9,  &kp N9)
+	   
+	   
+	   // more combos
+	   
+	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
+	   COMBO(quotes,           50, 19 21, &kp APOSTROPHE)
+	   COMBO(semi_colon,       50, 32 33, &kp SEMICOLON)	   
 	};
 	
     keymap {
         compatible = "zmk,keymap";
-        base_layer {
+        layer_0 {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp SEMI        &none
-                &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &kp O           &none
-                &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &kp FSLH        &none
-                                                        &lt L1 TAB     &lt L2 BSPC     &kp LSHFT             &kp RSHFT     &lt L2 SPACE   &lt L1 ENTER
+                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp ESC         &none
+                &none       &lt L1 A      &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm LWIN I      &lt L1 O        &none
+                &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &qem            &none
+                                                        &kp TAB        &kp LSHFT       &none                 &none         &kp RSHFT      &kp SPACE
             >; 
         };
     	
         layer_1 {
             
     		bindings = <
-                &none       &kp ESC       &kp PG_DN     &kp UP         &kp PG_UP       &kp PRINTSCREEN       &kp F12       &kp F7         &kp F8        &kp F9          &none           &none
-                &none       &kp HOME      &hm LWIN LEFT &hm LALT DOWN  &hm LCTRL RIGHT &kp END               &kp F11       &hm RCTRL F4   &hm RALT F5   &hm LWIN F6     &none           &none
-                &none       &kp C_MUTE    &kp C_VOL_DN  &kp C_PP       &kp C_VOL_UP    &kp K_CONTEXT_MENU    &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
-                                                        &mo BTL        &none           &kp LSHFT             &kp RSHFT     &none          &mo BTL
+			    &none       &none         &kp HOME      &kp UP         &kp END         &none                 &kp F12       &kp F7         &kp F8        &kp F9          &kp ESC         &none
+                &none       &mo BTL       &kp LEFT      &kp DOWN       &kp RIGHT       &none                 &kp F11       &hm RCTRL F4   &kp F5        &kp F6          &mo BTL         &none
+                &none       &hm LCTRL Z   &kp X         &kp C          &kp V           &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
+                                                        &kp TAB        &kp LSHFT       &none                 &none         &kp RSHFT      &kp SPACE
             >;
         };
     
-        layer_2 {
-
-    		bindings = <
-                &none       &kp GRAVE     &kp TILDE     &kp LBKT       &kp RBKT        &kp EQUAL             &kp PLUS      &kp N7         &kp N8        &kp N9          &kp ASTERISK    &none
-                &none       &kp BSLH      &hm LWIN FSLH &hm LALT LPAR  &hm LCTRL RPAR  &kp SQT               &kp MINUS     &hm RCTRL N4   &hm RALT N5   &hm LWIN N6     &kp SLASH       &none
-                &none       &none         &none         &kp LBRC       &kp RBRC        &kp DQT               &kp N0        &kp N1         &kp N2        &kp N3          &kp PERIOD      &none
-                                                        &none          &kp DELETE      &kp LSHFT             &kp RSHFT     &none          &none
-            >;
-        };
 	bluetooth_layer {
 
     		bindings = <
-                &none       &bt BT_CLR    &out OUT_USB  &out OUT_BLE   &none           &none                 &reset        &none          &none         &none           &bootloader     &none
-                &none       &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
-                &none       &none         &none         &none          &none           &none&none            &none         &none          &none         &none           &none           &none
+                &none       &none         &bt BT_CLR    &out OUT_USB   &out OUT_BLE    &none                 &reset        &none          &none         &none           &none           &none
+                &none       &none         &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0    &none                 &none         &none          &none         &none           &none           &none
+                &none       &none         &none         &none          &none           &none                 &bootloader   &none          &none         &none           &none           &none
                                                         &none          &none           &none                 &none         &none          &none
             >;
         };
