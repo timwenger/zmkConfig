@@ -52,6 +52,8 @@
 		
 	   // left hand top row.
 	   
+	   COMBO(pwr, &kp C_POWER, 0 4, L0, 50)
+	   
 	   combo_at_symbol {
 		  timeout-ms = <50>;
 		  key-positions = <2 3>;
