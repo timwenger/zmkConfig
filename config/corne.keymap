@@ -131,14 +131,7 @@
 	   // 3 key combos
 	   COMBO(close_window,     50,  2  3  4, &kp LA(F4))
 	   COMBO(task_mgmt,        50, 26 27 28, &kp LC(LS(ESC)))
-	   
-	   COMBO(sel_bt0,          50,  7  8  9, &bt BT_SEL 0)
-	   COMBO(sel_bt1,          50, 19 20 21, &bt BT_SEL 1)
-	   COMBO(sel_bt2,          50, 31 32 33, &bt BT_SEL 2)
-	   
-	   // 4 key combos
-	   COMBO(load_firmware,    50,  7  8  9 10, &bootloader)
-	   COMBO(reset,            50, 19 20 21 22, &reset)
+
  
 	};
 	
