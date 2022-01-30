@@ -127,6 +127,11 @@
 	   COMBO(num_nine,         50, 21 33, &kp N9)                // vertical
 	   COMBO(num_zero,        100, 22 34, &kp N0)                // vertical
 	   
+	   
+	   // 3 key combos
+	   COMBO(sleep,            50, 26 27 28, &kp C_SLEEP_MODE)
+	   
+	   
  
 	};
 	
