@@ -76,7 +76,7 @@
 	   
 	   COMBO(pg_dn,            50,  2  3, &kp PG_DN)
 	   COMBO(pg_up,            50,  3  4, &kp PG_UP)
-	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
+	   COMBO(screenshot,       50,  4  5, &kp PRINTSCREEN)
 	   COMBO(cntxt_menu,       50, 28 29, &kp K_CONTEXT_MENU)
 	   COMBO(bar,              50,  2 14, &kp PIPE)                // vertical
 	   COMBO(back_slash,       50,  3 15, &kp BSLH)                // vertical
@@ -127,8 +127,18 @@
 	   COMBO(num_nine,         50, 21 33, &kp N9)                // vertical
 	   COMBO(num_zero,        100, 22 34, &kp N0)                // vertical
 	   
+
+       // tab / app / desktop switching
 	   
-	   // 3 key combos
+	   COMBO(move_tab_right,   50, 18 19, &kp LC(TAB))
+	   COMBO(move_tab_left,    50, 16 17, &kp LC(LS(TAB)))
+	   
+	   COMBO(choose_apps,      50, 37 40, &kp LC(LA(TAB)))
+	   COMBO(task_view,        50, 36 41, &kp LG(TAB))
+	   
+	   COMBO(move_dsktp_left,  50, 36 37, &kp LG(LC(LEFT)))
+	   COMBO(move_dsktp_right, 50, 40 41, &kp LG(LC(RIGHT)))
+	   
 	   COMBO(close_window,     50,  2  3  4, &kp LA(F4))
 	   COMBO(task_mgmt,        50, 26 27 28, &kp LC(LS(ESC)))
 
