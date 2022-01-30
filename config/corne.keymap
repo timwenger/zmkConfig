@@ -78,9 +78,9 @@
 	   COMBO(pg_up,            50,  3  4, &kp PG_UP)
 	   COMBO(screenshot,       50, 16 17, &kp PRINTSCREEN)
 	   COMBO(cntxt_menu,       50, 28 29, &kp K_CONTEXT_MENU)
-	   COMBO(bar,              50, 14 26, &kp PIPE)                // vertical
-	   COMBO(back_slash,       50, 15 27, &kp BSLH)                // vertical
-	   COMBO(fwd_slash,        50, 16 28, &kp FSLH)                // vertical
+	   COMBO(bar,              50,  2 14, &kp PIPE)                // vertical
+	   COMBO(back_slash,       50,  3 15, &kp BSLH)                // vertical
+	   COMBO(fwd_slash,        50,  4 16, &kp FSLH)                // vertical
 	   
 	   
 	   // right hand general
@@ -116,16 +116,16 @@
 	   
 	   // numbers row
 	   	   
-	   COMBO(num_one,          50,  1 13, &kp N1)                // vertical
-	   COMBO(num_two,          50,  2 14, &kp N2)                // vertical
-	   COMBO(num_three,        50,  3 15, &kp N3)                // vertical
-	   COMBO(num_four,         50,  4 16, &kp N4)                // vertical
-	   COMBO(num_five,         50,  5 17, &kp N5)                // vertical
-	   COMBO(num_six,          50,  6 18, &kp N6)                // vertical
-	   COMBO(num_seven,        50,  7 19, &kp N7)                // vertical
-	   COMBO(num_eight,        50,  8 20, &kp N8)                // vertical
-	   COMBO(num_nine,         50,  9 21, &kp N9)                // vertical
-	   COMBO(num_zero,         50, 10 22, &kp N0)                // vertical
+	   COMBO(num_one,         100, 13 25, &kp N1)                // vertical
+	   COMBO(num_two,          50, 14 26, &kp N2)                // vertical
+	   COMBO(num_three,        50, 15 27, &kp N3)                // vertical
+	   COMBO(num_four,         50, 16 28, &kp N4)                // vertical
+	   COMBO(num_five,         50, 17 29, &kp N5)                // vertical
+	   COMBO(num_six,          50, 18 30, &kp N6)                // vertical
+	   COMBO(num_seven,        50, 19 31, &kp N7)                // vertical
+	   COMBO(num_eight,        50, 20 32, &kp N8)                // vertical
+	   COMBO(num_nine,         50, 21 33, &kp N9)                // vertical
+	   COMBO(num_zero,        100, 22 34, &kp N0)                // vertical
 	   
  
 	};
