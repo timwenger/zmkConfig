@@ -150,7 +150,7 @@
         layer_0 {
          
             bindings = <
-                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &kp ESC         &none
+                &none       &kp Q         &kp W         &kp F          &kp P           &kp G                 &kp J         &kp L          &kp U         &kp Y           &gresc          &none
                 &none       &kp A         &hm LWIN R    &hm LALT S     &hm LCTRL T     &kp D                 &kp H         &hm RCTRL N    &hm RALT E    &hm RWIN I      &lt L1 O        &none
                 &none       &lt L1 Z      &kp X         &kp C          &kp V           &kp B                 &kp K         &kp M          &kp COMMA     &kp DOT         &qem            &none
                                                         &kp TAB        &kp LSHFT       &none                 &none         &kp RSHFT      &kp SPACE
@@ -160,7 +160,7 @@
         layer_1 {
             
     		bindings = <
-			    &none       &none         &none         &kp UP         &none           &none                 &kp F12       &kp F7         &kp F8        &kp F9          &kp ESC         &none
+			    &none       &none         &kp RC(INS)   &kp UP         &kp RS(INS)     &none                 &kp F12       &kp F7         &kp F8        &kp F9          &gresc          &none
                 &none       &kp HOME      &kp LEFT      &kp DOWN       &kp RIGHT       &kp END               &kp F11       &hm RCTRL F4   &hm RALT F5   &hm RWIN F6     &mo BTL         &none
                 &none       &mo BTL       &kp RC(X)     &kp RC(C)      &kp RC(V)       &none                 &kp F10       &kp F1         &kp F2        &kp F3          &none           &none
                                                         &kp TAB        &kp LSHFT       &none                 &none         &kp RSHFT      &kp SPACE
