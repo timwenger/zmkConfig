@@ -115,17 +115,18 @@
 	   
 	   
 	   // numbers row
+	   // can have a high timeout, since it's unlikely to press both vertical keys rapidly with the same finger
 	   	   
-	   COMBO(num_one,         100, 13 25, &kp N1)                // vertical
-	   COMBO(num_two,          50, 14 26, &kp N2)                // vertical
-	   COMBO(num_three,        50, 15 27, &kp N3)                // vertical
-	   COMBO(num_four,         50, 16 28, &kp N4)                // vertical
-	   COMBO(num_five,         50, 17 29, &kp N5)                // vertical
-	   COMBO(num_six,          50, 18 30, &kp N6)                // vertical
-	   COMBO(num_seven,        50, 19 31, &kp N7)                // vertical
-	   COMBO(num_eight,        50, 20 32, &kp N8)                // vertical
-	   COMBO(num_nine,         50, 21 33, &kp N9)                // vertical
-	   COMBO(num_zero,        100, 22 34, &kp N0)                // vertical
+	   COMBO(num_one,         250, 13 25, &kp N1)                // vertical
+	   COMBO(num_two,         150, 14 26, &kp N2)                // vertical
+	   COMBO(num_three,       150, 15 27, &kp N3)                // vertical
+	   COMBO(num_four,        150, 16 28, &kp N4)                // vertical
+	   COMBO(num_five,        150, 17 29, &kp N5)                // vertical
+	   COMBO(num_six,         150, 18 30, &kp N6)                // vertical
+	   COMBO(num_seven,       150, 19 31, &kp N7)                // vertical
+	   COMBO(num_eight,       150, 20 32, &kp N8)                // vertical
+	   COMBO(num_nine,        150, 21 33, &kp N9)                // vertical
+	   COMBO(num_zero,        250, 22 34, &kp N0)                // vertical
 	   
 
        // tab / app / desktop switching
